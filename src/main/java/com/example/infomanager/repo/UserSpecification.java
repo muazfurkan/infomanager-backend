@@ -1,16 +1,7 @@
-package com.example.infomanager.specification;
+package com.example.infomanager.repo;
 
-import com.example.infomanager.User;
-import com.example.infomanager.UserPage;
-import com.example.infomanager.UserSearchCriteria;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
+import com.example.infomanager.model.User;
 import jakarta.persistence.criteria.Predicate;
-import jakarta.persistence.criteria.Root;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Repository;
 

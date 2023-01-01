@@ -1,12 +1,14 @@
-package com.example.infomanager;
+package com.example.infomanager.repo;
 
+import com.example.infomanager.model.User;
+import com.example.infomanager.model.UserPage;
+import com.example.infomanager.model.UserSearchCriteria;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
-import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Repository;

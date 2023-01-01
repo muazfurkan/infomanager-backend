@@ -1,7 +1,6 @@
-package com.example.infomanager;
+package com.example.infomanager.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,26 +8,21 @@ import org.jetbrains.annotations.NotNull;
 
 @Data
 @Entity
-@Table(name = "user")
+@Table(name = "admin")
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotNull("Name is required!")
+    @NotNull("userName is required!")
     @Column(nullable = false)
-    private String name;
+    private String adminName;
 
-    @NotNull("Email is required!")
-    @Email
+    @NotNull("Password is required!")
     @Column(nullable = false)
-    private String email;
-
-    private String phone;
-
-    private String address;
+    private String password;
 
 }

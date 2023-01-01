@@ -1,18 +1,16 @@
-package com.example.infomanager;
+package com.example.infomanager.controller;
 
+import com.example.infomanager.model.User;
+import com.example.infomanager.model.UserPage;
 import com.example.infomanager.service.UserService;
-import com.example.infomanager.specification.SpecificationRepository;
-import com.example.infomanager.specification.UserSpecification;
+import com.example.infomanager.repo.SpecificationRepository;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -35,7 +33,7 @@ public class UserController {
 
     @GetMapping("/users")
     public Page<User> paginationUsers(Integer pageSize,
-                                 Integer currentPage) {
+                                      Integer currentPage) {
         return userService.getPage(currentPage, pageSize);
     }
 

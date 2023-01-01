@@ -1,4 +1,4 @@
-package com.example.infomanager;
+package com.example.infomanager.model;
 
 import lombok.Data;
 import org.springframework.data.domain.Sort;

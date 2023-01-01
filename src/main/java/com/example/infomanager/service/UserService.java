@@ -1,6 +1,9 @@
 package com.example.infomanager.service;
 
-import com.example.infomanager.*;
+import com.example.infomanager.model.User;
+import com.example.infomanager.model.UserDTO;
+import com.example.infomanager.model.UserPage;
+import com.example.infomanager.model.UserSearchCriteria;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

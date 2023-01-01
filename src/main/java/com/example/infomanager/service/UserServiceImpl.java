@@ -1,9 +1,10 @@
 package com.example.infomanager.service;
 
-import com.example.infomanager.*;
-import com.example.infomanager.specification.SpecificationRepository;
-import com.example.infomanager.specification.UserSpecification;
-import jdk.jfr.Category;
+import com.example.infomanager.model.User;
+import com.example.infomanager.model.UserDTO;
+import com.example.infomanager.model.UserPage;
+import com.example.infomanager.model.UserSearchCriteria;
+import com.example.infomanager.repo.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.*;
 import org.springframework.data.jpa.domain.Specification;

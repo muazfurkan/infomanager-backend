@@ -1,13 +1,10 @@
-package com.example.infomanager.specification;
+package com.example.infomanager.repo;
 
-import com.example.infomanager.User;
-import org.springframework.data.domain.Page;
+import com.example.infomanager.model.User;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 @Repository
