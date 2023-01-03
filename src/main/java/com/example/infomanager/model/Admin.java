@@ -25,4 +25,7 @@ public class Admin {
     @Column(nullable = false)
     private String password;
 
+    private String role;
+    private boolean enabled = false;
+
 }
