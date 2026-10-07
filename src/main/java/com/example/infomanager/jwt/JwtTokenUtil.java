@@ -10,7 +10,6 @@ import java.util.Date;
 @Component
 public class JwtTokenUtil {
 
-    private final String SECRET_KEY = "<REMOVED>";
 
 
     public String generateToken(String username, String password){

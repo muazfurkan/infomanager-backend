@@ -1,0 +1,46 @@
+# Template. Copy to application.yml and fill in your own values.
+#   cp src/main/resources/application.yml.example src/main/resources/application.yml
+# application.yml is gitignored so local credentials stay out of the repository.
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: CHANGE_ME_DB_USER
+    url: jdbc:mysql://localhost:3306/CHANGE_ME_DB?createDatabaseIfNotExist=true
+    password: CHANGE_ME_DB_PASSWORD
+  jpa:
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      client:
+        registration:
+          api-client-oidc:
+            provider: spring
+            client-id: api-client
+            client-secret: CHANGE_ME_CLIENT_SECRET
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/{registrationId}"
+            scope: openid
+            client-name: api-client-oidc
+          api-client-authorization-code:
+            provider: spring
+            client-id: api-client
+            client-secret: CHANGE_ME_CLIENT_SECRET
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://127.0.0.1:8080/authorized"
+            scope: api-read
+            client-name: api-client-authorization-code
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+
+server:
+  port: 9000
