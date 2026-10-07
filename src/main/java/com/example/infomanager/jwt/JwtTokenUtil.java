@@ -10,8 +10,6 @@ import java.util.Date;
 @Component
 public class JwtTokenUtil {
 
-
-
     public String generateToken(String username, String password){
         Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
         return Jwts.builder()
@@ -22,8 +20,6 @@ public class JwtTokenUtil {
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
-
-    //veritabanıyla bir karşılaştırma yapılarak doğrulanması yapılacak. uyuyom!!!!
 
     public Claims getClaims(String token){
         Jwt<Header, Claims> jwt = Jwts.parserBuilder().build().parseClaimsJwt(token);
